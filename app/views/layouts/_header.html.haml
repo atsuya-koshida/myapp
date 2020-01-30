@@ -1,0 +1,27 @@
+.header{ style: " height: 60px; width: 100%; background-color: black;"}
+  .d-flex.justify-content-between
+    = link_to root_path, style:" padding-left: 20px; text-decoration: none; color: white; font-size: 40px; font-family: 'Montserrat Subrayada', sans-serif; " do
+      Koshida
+    - if user_signed_in?
+      .btn-group.dropleft{ style: "padding-right: 30px;"}
+        %button.btn.btn-outline-light.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :type => "button"}
+          Menu
+        .dropdown-menu
+          .dropdown-item
+            = link_to new_post_path, style:"text-decoration: none; color: black;" do
+              New Post
+          .dropdown-item
+            = link_to "#", style:"text-decoration: none; color: black;" do
+              Settings
+          .dropdown-item
+            = link_to destroy_user_session_path, style:"text-decoration: none; color: black", method: :delete do
+              Logout
+    - else
+      .header-right-box{ style: 'padding: 20px;' }
+        = link_to new_user_registration_path do
+          %button.btn.btn-outline-light
+            新規登録
+        = link_to new_user_session_path do
+          %button.btn.btn-outline-light
+            ログイン
+
