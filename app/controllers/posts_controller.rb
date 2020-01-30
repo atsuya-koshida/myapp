@@ -7,7 +7,8 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
-  def create(post_params)
+  def create
+    Post.create(post_params)
     redirect_to posts_path
   end
 
