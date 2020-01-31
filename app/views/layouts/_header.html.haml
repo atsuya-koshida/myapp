@@ -11,7 +11,7 @@
             = link_to new_post_path, style:"text-decoration: none; color: black;" do
               New Post
           .dropdown-item
-            = link_to "#", style:"text-decoration: none; color: black;" do
+            = link_to edit_user_registration_path, style:"text-decoration: none; color: black;" do
               Settings
           .dropdown-item
             = link_to destroy_user_session_path, style:"text-decoration: none; color: black", method: :delete do
@@ -24,4 +24,3 @@
         = link_to new_user_session_path do
           %button.btn.btn-outline-light
             ログイン
-
