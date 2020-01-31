@@ -1,8 +1,10 @@
 = render partial: 'layouts/header'
-.new-blog__title{ style: " display: flex; justify-content: center; "}
-  新規記事の作成
-.form-master{ style: "width: 600px; "}
-  = form_with model: @post, class: :form, local: true do |form|
-    = form.text_field :title, placeholder: :タイトル, class: "form__title form-control"
-    = form.text_area :content, placeholder: :ブログ本文, class: "form__text form-control"
-    = form.submit '投稿する', class: "form__btn btn btn-primary"
+.new-blog__contents{ style: "height: 100vh;"}
+  .new-blog__title.text-center{ style: " font-size: 20px; padding: 50px 0; "}
+    新規記事の作成
+  .form-master{ style: "width: 600px; margin: auto; "}
+    = form_with model: @post, class: :form, local: true do |form|
+      = form.text_field :title, placeholder: :タイトル, class: "form__title form-control"
+      = form.text_area :content, placeholder: :ブログ本文, class: "form__text form-control", style: "height: 400px;"
+      .text-center
+        = form.submit '投稿する', class: "form__btn btn btn-primary", style: "margin-top: 10px;"

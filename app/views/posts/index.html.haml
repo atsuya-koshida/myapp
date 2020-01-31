@@ -1,14 +1,6 @@
 = render partial: '/layouts/header'
 .contents
-  .blogs
-    .blog
-      .blog__left-box
-      .blog__right-box
-        .blog__right-box__top
-          .blog__right-box__top--title
-            LGTM
-        .blog__right-box__bottom
-          .blog__right-box__bottom--user-name
-            敦也だよ
-          .blog__right-box__bottom--date
-            2020 1/30 16:25
+  .container
+    .row
+      - @posts.each do |post|
+        = render partial: "post", locals: {post: post}

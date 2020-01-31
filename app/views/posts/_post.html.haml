@@ -1,0 +1,11 @@
+.blogs.col-sm-4
+  .card.mt-5{:style => "width: 18rem; margin: auto;"}
+    .card-img-top
+      = image_tag "AdobeStock_242452313.jpeg", size: "500x100", style: "width: 100%; height: 30%;"
+    .card-body
+      .card-title
+        = post.title
+      .card-text
+        = post.created_at
+      .btn.btn-dark
+        = link_to "詳細", post_path(post.id), style: "text-decoration: none; color: white;"

@@ -1,41 +1,12 @@
 .contents {
   height: calc(100vh - 60px);
   width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-image: url(AdobeStock_69424905.jpeg);
   background-size: cover;
-  .blogs {
-    height: calc(100vh - 200px);
-    width: calc(100vw - 600px);
-    .blog {
-      margin: 20px;
-      background-color: rgba(0, 0, 0, 0.5);
-      display: flex;
-      &__left-box {
-        padding-right: 20px;
-      }
-      &__right-box {
-        &__top {
-          font-size: 25px;
-          font-weight: bold;
-          &--title {
-            color: #ffffff;
-            border-bottom: 1px solid lightgrey;
-          }
-        }
-      &__bottom {
-        font-size: 15px;
-        color: #999;
-        display: flex;
-        &--user-name {
-        }
-        &--date {
-          margin-left: 20px;
-        }
-      }
-      }
-    }
-  }
+  overflow: scroll;
+}
+
+.new-blog__contents {
+  background-image: url(AdobeStock_222559316_Preview.jpeg);
+  background-size: cover;
 }
