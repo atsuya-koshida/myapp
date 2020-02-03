@@ -1,0 +1,12 @@
+= render partial: 'layouts/header'
+.postTitle{ style: "text-align: center;"}
+  = @post.title
+.postDate{ style: "text-align: center;"}
+  = @post.created_at
+.postAuthor
+- if user_signed_in? && current_user.id == @post.user.id
+  .postManage{ style: "text-align: center;"}
+    = link_to "編集", edit_post_path(@post.id), class: "postManage__edit"
+    = link_to "削除", post_path(@post.id), method: :delete, class: "postManage__delete"
+.postText{ style: "text-align: center;"}
+  = simple_format @post.content

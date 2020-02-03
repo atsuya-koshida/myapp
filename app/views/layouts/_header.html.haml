@@ -1,6 +1,6 @@
 .header{ style: " height: 60px; width: 100%; background-color: black;"}
   .d-flex.justify-content-between
-    = link_to root_path, style:" padding-left: 20px; text-decoration: none; color: white; font-size: 40px; font-family: 'Montserrat Subrayada', sans-serif; " do
+    = link_to root_path, style:" padding-left: 30px; text-decoration: none; color: white; font-size: 40px; font-family: 'Montserrat Subrayada', sans-serif; " do
       Koshida
     - if user_signed_in?
       .btn-group.dropleft{ style: "padding-right: 30px;"}
@@ -17,7 +17,7 @@
             = link_to destroy_user_session_path, style:"text-decoration: none; color: black", method: :delete do
               Logout
     - else
-      .header-right-box{ style: 'padding: 20px;' }
+      .header-right-box{ style: 'padding: 10px 20px 0 0;' }
         = link_to new_user_registration_path do
           %button.btn.btn-outline-light
             新規登録

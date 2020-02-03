@@ -4,3 +4,5 @@
     .row
       - @posts.each do |post|
         = render partial: "post", locals: {post: post}
+  .page-posts{ style: "display: flex; justify-content: center; font-size: 30px; color: #fff;" }
+    = paginate(@posts)
